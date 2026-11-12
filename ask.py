@@ -12,7 +12,22 @@ load_dotenv()
 client = Anthropic()
 model = "claude-haiku-4-5-20251001"
 policy_path = Path(__file__).with_name("policy.md")
-system_prompt = policy_path.read_text(encoding="utf-8")
+policy = policy_path.read_text(encoding="utf-8")
+
+system_prompt = f"""
+    You are Mock Bank's customer support assistant.
+    Answer only from the policy below.
+    If the policy does not answer the question:
+
+    1. Say you don't have that information
+    2. Direct them to telephone banking on 0800 000 0002 or live chat
+    3. Set confident to false
+    4. Never guess or use outside knowledge.
+
+    <policy>
+    {policy}
+    </policy>
+    """
 
 response_schema = {
     "type": "object",

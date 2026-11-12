@@ -45,6 +45,7 @@ Faster Payments, Direct Debits, standing orders and UK ATM withdrawals are **fre
 |---|---|
 | Branches | Mon–Fri 9:00–17:00 · Sat 9:00–13:00 · Closed Sun and bank holidays |
 | Telephone banking | Mon–Fri 8:00–20:00 · Sat 9:00–17:00 · Sun 10:00–16:00 |
+| Telephone banking number | 0800 000 0002 |
 | Lost/stolen cards and fraud line | 24 hours, 7 days |
 | Mobile app and online banking | 24/7 (planned maintenance Sun 01:00–03:00) |
 | Live chat | Daily 7:00–23:00 |

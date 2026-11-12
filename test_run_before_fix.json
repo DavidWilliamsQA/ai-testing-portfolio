@@ -1,0 +1,72 @@
+[
+  {
+    "question": "I lost my debit card last month and got a replacement. I've just lost it again. Will I be charged for another one?",
+    "expected_answer": "Yes. The first lost or stolen card replacement in 12 months is free; subsequent ones cost \u00a35.00. Delivery takes 3\u20135 working days.",
+    "actual_answer": "Yes, you will be charged \u00a35.00 for this replacement. According to the card replacement policy, the first lost or stolen card replacement within 12 months is free, but subsequent replacements are charged at \u00a35.00 each. Since you already had one free replacement last month, this second replacement will incur the fee.",
+    "source_section": "Section 2. Card replacement",
+    "confident": true
+  },
+  {
+    "question": "I have a Premier account. Do I have to pay the \u00a315 monthly fee?",
+    "expected_answer": "The \u00a315.00 monthly fee is waived in any month you pay in \u00a35,000 or more.",
+    "actual_answer": "No, the \u00a315 monthly fee is waived if you have at least \u00a35,000 paid in each month. Otherwise, the fee applies.",
+    "source_section": "Section 1: Fees and charges (Monthly account fee row)",
+    "confident": true
+  },
+  {
+    "question": "I want to send \u00a33,000 to someone I've never paid before from my Everyday account. Can I do it in one go?",
+    "expected_answer": "No. The first payment to a new payee on an Everyday account is limited to \u00a31,000 and is held for 4 hours for checks.",
+    "actual_answer": "No, you cannot send \u00a33,000 to a new payee in one go from your Everyday account. The first payment to a new payee is limited to \u00a31,000, and this payment is held for 4 hours for checks. After the first payment clears, you could then make additional payments up to your daily Faster Payment limit of \u00a325,000.",
+    "source_section": "Section 4: Transfer limits",
+    "confident": true
+  },
+  {
+    "question": "Is my local branch open on Sunday?",
+    "expected_answer": "No. Branches are closed on Sundays and bank holidays. Telephone banking is open Sunday 10:00\u201316:00, and the app, online banking and the lost/stolen card line are available 24/7.",
+    "actual_answer": "No, branches are closed on Sundays. According to the opening hours policy, branches are open Monday\u2013Friday 9:00\u201317:00 and Saturday 9:00\u201313:00, but closed on Sundays and bank holidays. However, you can access banking services on Sunday through telephone banking (10:00\u201316:00), mobile app and online banking (24/7), or live chat (7:00\u201323:00).",
+    "source_section": "Section 3: Opening hours",
+    "confident": true
+  },
+  {
+    "question": "How much cash can I take out of an ATM in one day with an Everyday account, and when does the limit reset?",
+    "expected_answer": "\u00a3500 per day. Daily limits reset at midnight UK time.",
+    "actual_answer": "With an Everyday account, you can withdraw up to \u00a3500 per day from an ATM. The daily limit resets at midnight UK time.",
+    "source_section": "Section 4. Transfer limits",
+    "confident": true
+  },
+  {
+    "question": "What happens if I try to spend more than my balance and I don't have an overdraft set up?",
+    "expected_answer": "Unarranged overdrafts are not permitted, so the payment is declined. There is no fee for a declined payment.",
+    "actual_answer": "If you try to spend more than your balance without an arranged overdraft, your payment will be declined. According to the policy, unarranged overdrafts are not permitted on either the Everyday or Premier accounts, and payments are simply declined when there are insufficient funds.",
+    "source_section": "Section 1. Fees and charges - Unarranged overdraft row",
+    "confident": true
+  },
+  {
+    "question": "I'm a Premier customer on holiday in Spain and my card was stolen. How quickly can I get a new one, and what will it cost?",
+    "expected_answer": "An emergency card abroad arrives within 2 working days and is free for Premier customers (normally \u00a330.00). Report the theft immediately in the app or on 0800 000 0000 (24/7).",
+    "actual_answer": "As a Premier customer with a stolen card, you can get an emergency card abroad for free (normally \u00a330.00 for other account types) within 2 working days. Additionally, your digital card is available immediately in the app and in Apple Pay/Google Pay after you order the replacement. You should report the theft immediately by calling the lost/stolen cards and fraud line on 0800 000 0000 (available 24/7), and your card will be frozen straight away. For the physical replacement card, there is no charge for Premier customers.",
+    "source_section": "Section 2: Card replacement",
+    "confident": true
+  },
+  {
+    "question": "What interest rate does the Mock Saver Account pay?",
+    "expected_answer": "The policy names the Mock Saver Account but does not state its interest rate. The bot should say it doesn't have that information and refer the customer to the bank.",
+    "actual_answer": "The policy does not provide information about the interest rate paid on the Mock Saver Account. While the Mock Saver Account is mentioned in the policy header as an account type to which this policy applies, the document focuses on fees, charges, and operational procedures rather than savings interest rates.",
+    "source_section": "Policy header and Section 1 (Fees and charges)",
+    "confident": true
+  },
+  {
+    "question": "If I pay a cheque into a branch, how long until the money is in my account?",
+    "expected_answer": "Cheque clearing times are not covered by the policy. The bot should say so and refer the customer to the bank, without guessing a timeframe.",
+    "actual_answer": "The policy does not specify how long it takes for cheque deposits to clear when paid in at a branch. This information is not covered in the Customer Account Policy provided.",
+    "source_section": "General policy - not addressed",
+    "confident": false
+  },
+  {
+    "question": "Can I open a joint account with my partner, and what ID do we need?",
+    "expected_answer": "Joint accounts and account-opening ID requirements are not covered by the policy. The bot should not infer them from the 'ID checks' mentioned for CHAPS or limit increases.",
+    "actual_answer": "The policy document does not contain information about opening joint accounts or the ID requirements for account opening. This policy covers fees, charges, card replacement, opening hours, transfer limits, and complaints procedures for existing Mock Bank accounts, but does not address account opening procedures or joint account eligibility.",
+    "source_section": "General policy scope (Policy ref: MB-CAP-2026-04)",
+    "confident": false
+  }
+]
