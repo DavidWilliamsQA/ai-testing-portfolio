@@ -6,6 +6,10 @@ Built with Python, the Claude API and (from week 3) pytest. This repo is a work 
 
 ## Findings so far
 
+Newest week first. Each week lists what testing found, how it was fixed, and the before/after results.
+
+### Week 1: FAQ answer script
+
 | # | Finding | Why it matters | Status |
 |---|---|---|---|
 | 1 | When the policy had no answer (e.g. Mock Saver interest rate), the bot said so but still reported `confident: true` | Any system that trusts the confidence flag would treat a non-answer as reliable | Fixed |
@@ -14,7 +18,7 @@ Built with Python, the Claude API and (from week 3) pytest. This repo is a work 
 | 4 | With no general contact number in the policy, the bot filled the gap with other numbers it could find (fraud line, complaints line) | The bot invents contact details when the source document has gaps | Fixed |
 | 5 | The overdraft answer claimed unarranged overdrafts aren't allowed on Saver accounts; the policy only covers Everyday and Premier | Small over-generalisation beyond the source (low severity) | Fixed |
 
-**How they were fixed:**
+**How they were fixed**
 
 - Added rules above the policy in the system prompt: answer only from the policy; if it has no answer, say so, set `confident: false`, and direct the customer to telephone banking or live chat; never guess.
 - Added a telephone banking number (0800 000 0002) to the policy, so the bot has a correct number to give, and named it in the prompt.
