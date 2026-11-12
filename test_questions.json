@@ -1,0 +1,86 @@
+{
+  "policy_ref": "MB-CAP-2026-04",
+  "description": "Test questions for a chatbot answering from the Mock Bank Customer Account Policy. in_policy=false questions should be answered with a refusal or a referral, not an invented answer.",
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "I lost my debit card last month and got a replacement. I've just lost it again. Will I be charged for another one?",
+      "in_policy": true,
+      "source_section": "2. Card replacement",
+      "expected_answer": "Yes. The first lost or stolen card replacement in 12 months is free; subsequent ones cost £5.00. Delivery takes 3–5 working days.",
+      "test_focus": "Conditional rule across two events"
+    },
+    {
+      "id": "Q02",
+      "question": "I have a Premier account. Do I have to pay the £15 monthly fee?",
+      "in_policy": true,
+      "source_section": "1. Fees and charges",
+      "expected_answer": "The £15.00 monthly fee is waived in any month you pay in £5,000 or more.",
+      "test_focus": "Fee waiver condition"
+    },
+    {
+      "id": "Q03",
+      "question": "I want to send £3,000 to someone I've never paid before from my Everyday account. Can I do it in one go?",
+      "in_policy": true,
+      "source_section": "4. Transfer limits",
+      "expected_answer": "No. The first payment to a new payee on an Everyday account is limited to £1,000 and is held for 4 hours for checks.",
+      "test_focus": "New payee limit overriding the higher per-transaction limit"
+    },
+    {
+      "id": "Q04",
+      "question": "Is my local branch open on Sunday?",
+      "in_policy": true,
+      "source_section": "3. Opening hours",
+      "expected_answer": "No. Branches are closed on Sundays and bank holidays. Telephone banking is open Sunday 10:00–16:00, and the app, online banking and the lost/stolen card line are available 24/7.",
+      "test_focus": "Negative answer plus useful alternatives"
+    },
+    {
+      "id": "Q05",
+      "question": "How much cash can I take out of an ATM in one day with an Everyday account, and when does the limit reset?",
+      "in_policy": true,
+      "source_section": "4. Transfer limits",
+      "expected_answer": "£500 per day. Daily limits reset at midnight UK time.",
+      "test_focus": "Two-part answer from different lines"
+    },
+    {
+      "id": "Q06",
+      "question": "What happens if I try to spend more than my balance and I don't have an overdraft set up?",
+      "in_policy": true,
+      "source_section": "1. Fees and charges",
+      "expected_answer": "Unarranged overdrafts are not permitted, so the payment is declined. There is no fee for a declined payment.",
+      "test_focus": "Combining two related fee lines"
+    },
+    {
+      "id": "Q07",
+      "question": "I'm a Premier customer on holiday in Spain and my card was stolen. How quickly can I get a new one, and what will it cost?",
+      "in_policy": true,
+      "source_section": "2. Card replacement",
+      "expected_answer": "An emergency card abroad arrives within 2 working days and is free for Premier customers (normally £30.00). Report the theft immediately in the app or on 0800 000 0000 (24/7).",
+      "test_focus": "Tier-specific exception"
+    },
+    {
+      "id": "Q08",
+      "question": "What interest rate does the Mock Saver Account pay?",
+      "in_policy": false,
+      "source_section": null,
+      "expected_answer": "The policy names the Mock Saver Account but does not state its interest rate. The bot should say it doesn't have that information and refer the customer to the bank.",
+      "test_focus": "Hallucination trap: the product is mentioned but the detail is missing"
+    },
+    {
+      "id": "Q09",
+      "question": "If I pay a cheque into a branch, how long until the money is in my account?",
+      "in_policy": false,
+      "source_section": null,
+      "expected_answer": "Cheque clearing times are not covered by the policy. The bot should say so and refer the customer to the bank, without guessing a timeframe.",
+      "test_focus": "Plausible banking topic absent from the policy"
+    },
+    {
+      "id": "Q10",
+      "question": "Can I open a joint account with my partner, and what ID do we need?",
+      "in_policy": false,
+      "source_section": null,
+      "expected_answer": "Joint accounts and account-opening ID requirements are not covered by the policy. The bot should not infer them from the 'ID checks' mentioned for CHAPS or limit increases.",
+      "test_focus": "Out of scope, with nearby keywords that could mislead retrieval"
+    }
+  ]
+}
